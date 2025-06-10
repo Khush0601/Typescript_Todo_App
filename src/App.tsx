@@ -1,26 +1,90 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./App.css"
+import InputField from './Components/inputField'
+// // defining types:
+// let name:unknown;
+// name=true
+// let age:number;
+// let isStudent:boolean;
+// let hobbies:string[];
+// hobbies=['helllo','hiii']
+// let role:[number,string] 
+// role=[5,'kh']
 
-function App() {
+// //object defining:
+// interface Person{
+//   name:string,
+//   age:number,
+// }
+
+// interface Guy extends Person{
+//   proffession:string
+// }
+// let newperson:Guy={
+//   name:'kh',
+//   age:6,
+//   proffession:'engineer'
+// }
+
+// //type:
+
+// type X={
+//   a:string,
+//   b:number
+// }
+
+// type Y=X & {
+//   c:string,
+//   d:number
+// }
+
+// let y:Y={
+//   a:'string',
+//   b:7,
+//   c:'jio',
+//   d:6
+// }
+
+// //interface and type together:
+// interface Person{
+//   name:string,
+//   age:number,
+// }
+// type U=Person &{
+//   a:string,
+//   b:number,
+// }
+
+// let v:U={
+//   name:'khu',
+//   age:9,
+//   a:'kkkk',
+//   b:7
+
+// }
+
+
+
+// // for arrOfObjects:
+// let lotsOfPeople:Person[];
+// lotsOfPeople=[
+//   {
+//     name:'khus',
+//     age:6
+//   }
+// ]
+
+// // defining a function:
+
+// let printName:(name:string)=>never;
+const App:React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <span className='heading'>Taskify</span>
+      <InputField/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
