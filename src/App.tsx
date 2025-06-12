@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./App.css"
 import InputField from './Components/inputField'
+import { Todo } from './model'
 // // defining types:
 // let name:unknown;
 // name=true
@@ -78,11 +79,17 @@ import InputField from './Components/inputField'
 
 // let printName:(name:string)=>never;
 const App:React.FC = () => {
+const [todo,setTodo]=useState<string>("")
+const [todos,setTodos]=useState<Todo[]>([])// this will contain all or todos
 
+const handleAdd=(e:React.FormEvent)=>{
+e.preventDefault()
+}
+console.log(todo)
   return (
     <div className='app'>
       <span className='heading'>Taskify</span>
-      <InputField/>
+      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
     </div>
   )
 }
