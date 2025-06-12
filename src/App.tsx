@@ -84,12 +84,24 @@ const [todos,setTodos]=useState<Todo[]>([])// this will contain all or todos
 
 const handleAdd=(e:React.FormEvent)=>{
 e.preventDefault()
+
+if(todo){
+  setTodos([...todos,{id:Date.now(),todo:todo,isDone:false}])
+  setTodo("")
 }
+
+}
+console.log(todos,'all todo')
 console.log(todo)
   return (
     <div className='app'>
       <span className='heading'>Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      {todos.map((t)=>{
+       return (
+        <div>{t.todo}</div>
+       )
+      })}
     </div>
   )
 }
