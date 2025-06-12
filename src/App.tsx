@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./App.css"
 import InputField from './Components/inputField'
 import { Todo } from './model'
+import Todolist from './Components/Todolist'
 // // defining types:
 // let name:unknown;
 // name=true
@@ -97,11 +98,8 @@ console.log(todo)
     <div className='app'>
       <span className='heading'>Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      {todos.map((t)=>{
-       return (
-        <div>{t.todo}</div>
-       )
-      })}
+      <Todolist todos={todos} setTodos={setTodos}/>
+      
     </div>
   )
 }

@@ -39,3 +39,49 @@
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
 }
+.todos{
+    display:flex;
+    justify-content: space-evenly;
+    width:90%;
+    flex-wrap: wrap;
+}
+.todos_Single{
+    display:flex;
+    width:29.5%;
+    border-radius:5px;
+    padding:20px;
+    margin-top: 15px;
+    background-color: rgb(160, 160, 83);
+
+}
+.icon{
+    margin-left:10px;
+    font-size:25px;
+    cursor:pointer
+}
+.todos_single--text{
+    flex:1;
+    padding:5px;
+    border:none;
+    font-size:20px
+}
+/* .todos_single--text:focus{
+    outline: none;
+} */
+@media (max-width:1200px){
+    .todos_Single{
+        width: 40%;
+      }
+}
+
+@media (max-width:700px){
+  .input{
+   width: 95%;
+  }
+  .todos{
+    width: 95%;
+  }
+  .todos_Single{
+    width: 100%;
+  }
+}
